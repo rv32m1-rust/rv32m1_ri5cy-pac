@@ -1,0 +1,17 @@
+[package]
+name = "rv32m1_ri5cy-pac"
+version = "0.1.0"
+authors = ["shamiao <shamiaoc@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+bare-metal = "^0.2.5"
+riscv = "^0.5.4"
+riscv-rt = { version = "^0.6.1", optional = true }
+vcell = "^0.1.2"
+
+[features]
+rt = ["riscv-rt"]
+
+# [build-dependencies]
+# svd2rust = "0.16.1" # not sure whether include svd2rust into build process
