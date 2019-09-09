@@ -2,7 +2,14 @@
 name = "rv32m1_ri5cy-pac"
 version = "0.1.0"
 authors = ["SHA Miao <shamiaoc@gmail.com>"]
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/rv32m1-rust/rv32m1_ri5cy-pac"
+description = "Peripheral access API for the RI5CY core of RV32M1 chips"
+keywords = ["riscv", "rv32m1", "register", "peripheral"]
+categories = ["embedded", "hardware-support", "no-std"]
 edition = "2018"
+
 
 [dependencies]
 bare-metal = "^0.2.5"
