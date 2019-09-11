@@ -39,26 +39,6 @@ impl Deref for MSCM {
 }
 #[doc = "MSCM"]
 pub mod mscm;
-#[doc = "AXBS"]
-pub struct AXBS0 {
-  _marker: PhantomData<*const ()>,
-}
-unsafe impl Send for AXBS0 {}
-impl AXBS0 {
-  #[doc = r"Returns a pointer to the register block"]
-  #[inline(always)]
-  pub const fn ptr() -> *const axbs0::RegisterBlock {
-    0x4000_4000 as *const _
-  }
-}
-impl Deref for AXBS0 {
-  type Target = axbs0::RegisterBlock;
-  fn deref(&self) -> &Self::Target {
-    unsafe { &*AXBS0::ptr() }
-  }
-}
-#[doc = "AXBS"]
-pub mod axbs0;
 #[doc = "DMA"]
 pub struct DMA0 {
   _marker: PhantomData<*const ()>,
@@ -1019,346 +999,6 @@ impl Deref for VREF {
 }
 #[doc = "VREF"]
 pub mod vref;
-#[doc = "sema42_ips"]
-pub struct SEMA421 {
-  _marker: PhantomData<*const ()>,
-}
-unsafe impl Send for SEMA421 {}
-impl SEMA421 {
-  #[doc = r"Returns a pointer to the register block"]
-  #[inline(always)]
-  pub const fn ptr() -> *const sema421::RegisterBlock {
-    0x4101_b000 as *const _
-  }
-}
-impl Deref for SEMA421 {
-  type Target = sema421::RegisterBlock;
-  fn deref(&self) -> &Self::Target {
-    unsafe { &*SEMA421::ptr() }
-  }
-}
-#[doc = "sema42_ips"]
-pub mod sema421;
-#[doc = "crr_cmc1"]
-pub struct SMC1 {
-  _marker: PhantomData<*const ()>,
-}
-unsafe impl Send for SMC1 {}
-impl SMC1 {
-  #[doc = r"Returns a pointer to the register block"]
-  #[inline(always)]
-  pub const fn ptr() -> *const smc1::RegisterBlock {
-    0x4102_0000 as *const _
-  }
-}
-impl Deref for SMC1 {
-  type Target = smc1::RegisterBlock;
-  fn deref(&self) -> &Self::Target {
-    unsafe { &*SMC1::ptr() }
-  }
-}
-#[doc = "crr_cmc1"]
-pub mod smc1;
-#[doc = "LLWU"]
-pub struct LLWU1 {
-  _marker: PhantomData<*const ()>,
-}
-unsafe impl Send for LLWU1 {}
-impl LLWU1 {
-  #[doc = r"Returns a pointer to the register block"]
-  #[inline(always)]
-  pub const fn ptr() -> *const llwu1::RegisterBlock {
-    0x4102_3000 as *const _
-  }
-}
-impl Deref for LLWU1 {
-  type Target = llwu1::RegisterBlock;
-  fn deref(&self) -> &Self::Target {
-    unsafe { &*LLWU1::ptr() }
-  }
-}
-#[doc = "LLWU"]
-pub mod llwu1;
-#[doc = "TRGMUX"]
-pub struct TRGMUX1 {
-  _marker: PhantomData<*const ()>,
-}
-unsafe impl Send for TRGMUX1 {}
-impl TRGMUX1 {
-  #[doc = r"Returns a pointer to the register block"]
-  #[inline(always)]
-  pub const fn ptr() -> *const trgmux1::RegisterBlock {
-    0x4102_5000 as *const _
-  }
-}
-impl Deref for TRGMUX1 {
-  type Target = trgmux1::RegisterBlock;
-  fn deref(&self) -> &Self::Target {
-    unsafe { &*TRGMUX1::ptr() }
-  }
-}
-#[doc = "TRGMUX"]
-pub mod trgmux1;
-#[doc = "WDOG"]
-pub struct WDOG1 {
-  _marker: PhantomData<*const ()>,
-}
-unsafe impl Send for WDOG1 {}
-impl WDOG1 {
-  #[doc = r"Returns a pointer to the register block"]
-  #[inline(always)]
-  pub const fn ptr() -> *const wdog1::RegisterBlock {
-    0x4102_6000 as *const _
-  }
-}
-impl Deref for WDOG1 {
-  type Target = wdog1::RegisterBlock;
-  fn deref(&self) -> &Self::Target {
-    unsafe { &*WDOG1::ptr() }
-  }
-}
-#[doc = "WDOG"]
-pub mod wdog1;
-#[doc = "PCC"]
-pub struct PCC1 {
-  _marker: PhantomData<*const ()>,
-}
-unsafe impl Send for PCC1 {}
-impl PCC1 {
-  #[doc = r"Returns a pointer to the register block"]
-  #[inline(always)]
-  pub const fn ptr() -> *const pcc1::RegisterBlock {
-    0x4102_7000 as *const _
-  }
-}
-impl Deref for PCC1 {
-  type Target = pcc1::RegisterBlock;
-  fn deref(&self) -> &Self::Target {
-    unsafe { &*PCC1::ptr() }
-  }
-}
-#[doc = "PCC"]
-pub mod pcc1;
-#[doc = "CAU3"]
-pub struct CAU3 {
-  _marker: PhantomData<*const ()>,
-}
-unsafe impl Send for CAU3 {}
-impl CAU3 {
-  #[doc = r"Returns a pointer to the register block"]
-  #[inline(always)]
-  pub const fn ptr() -> *const cau3::RegisterBlock {
-    0x4102_8000 as *const _
-  }
-}
-impl Deref for CAU3 {
-  type Target = cau3::RegisterBlock;
-  fn deref(&self) -> &Self::Target {
-    unsafe { &*CAU3::ptr() }
-  }
-}
-#[doc = "CAU3"]
-pub mod cau3;
-#[doc = "TRNG"]
-pub struct TRNG {
-  _marker: PhantomData<*const ()>,
-}
-unsafe impl Send for TRNG {}
-impl TRNG {
-  #[doc = r"Returns a pointer to the register block"]
-  #[inline(always)]
-  pub const fn ptr() -> *const trng::RegisterBlock {
-    0x4102_9000 as *const _
-  }
-}
-impl Deref for TRNG {
-  type Target = trng::RegisterBlock;
-  fn deref(&self) -> &Self::Target {
-    unsafe { &*TRNG::ptr() }
-  }
-}
-#[doc = "TRNG"]
-pub mod trng;
-#[doc = "LPIT"]
-pub struct LPIT1 {
-  _marker: PhantomData<*const ()>,
-}
-unsafe impl Send for LPIT1 {}
-impl LPIT1 {
-  #[doc = r"Returns a pointer to the register block"]
-  #[inline(always)]
-  pub const fn ptr() -> *const lpit1::RegisterBlock {
-    0x4102_a000 as *const _
-  }
-}
-impl Deref for LPIT1 {
-  type Target = lpit1::RegisterBlock;
-  fn deref(&self) -> &Self::Target {
-    unsafe { &*LPIT1::ptr() }
-  }
-}
-#[doc = "LPIT"]
-pub mod lpit1;
-#[doc = "LPTMR"]
-pub struct LPTMR2 {
-  _marker: PhantomData<*const ()>,
-}
-unsafe impl Send for LPTMR2 {}
-impl LPTMR2 {
-  #[doc = r"Returns a pointer to the register block"]
-  #[inline(always)]
-  pub const fn ptr() -> *const lptmr2::RegisterBlock {
-    0x4102_b000 as *const _
-  }
-}
-impl Deref for LPTMR2 {
-  type Target = lptmr2::RegisterBlock;
-  fn deref(&self) -> &Self::Target {
-    unsafe { &*LPTMR2::ptr() }
-  }
-}
-#[doc = "LPTMR"]
-pub mod lptmr2;
-#[doc = "TPM"]
-pub struct TPM3 {
-  _marker: PhantomData<*const ()>,
-}
-unsafe impl Send for TPM3 {}
-impl TPM3 {
-  #[doc = r"Returns a pointer to the register block"]
-  #[inline(always)]
-  pub const fn ptr() -> *const tpm3::RegisterBlock {
-    0x4102_d000 as *const _
-  }
-}
-impl Deref for TPM3 {
-  type Target = tpm3::RegisterBlock;
-  fn deref(&self) -> &Self::Target {
-    unsafe { &*TPM3::ptr() }
-  }
-}
-#[doc = "TPM"]
-pub mod tpm3;
-#[doc = "LPI2C"]
-pub struct LPI2C3 {
-  _marker: PhantomData<*const ()>,
-}
-unsafe impl Send for LPI2C3 {}
-impl LPI2C3 {
-  #[doc = r"Returns a pointer to the register block"]
-  #[inline(always)]
-  pub const fn ptr() -> *const lpi2c3::RegisterBlock {
-    0x4102_e000 as *const _
-  }
-}
-impl Deref for LPI2C3 {
-  type Target = lpi2c3::RegisterBlock;
-  fn deref(&self) -> &Self::Target {
-    unsafe { &*LPI2C3::ptr() }
-  }
-}
-#[doc = "LPI2C"]
-pub mod lpi2c3;
-#[doc = "RSIM"]
-pub struct RSIM {
-  _marker: PhantomData<*const ()>,
-}
-unsafe impl Send for RSIM {}
-impl RSIM {
-  #[doc = r"Returns a pointer to the register block"]
-  #[inline(always)]
-  pub const fn ptr() -> *const rsim::RegisterBlock {
-    0x4102_f000 as *const _
-  }
-}
-impl Deref for RSIM {
-  type Target = rsim::RegisterBlock;
-  fn deref(&self) -> &Self::Target {
-    unsafe { &*RSIM::ptr() }
-  }
-}
-#[doc = "RSIM"]
-pub mod rsim;
-#[doc = "LPSPI"]
-pub struct LPSPI3 {
-  _marker: PhantomData<*const ()>,
-}
-unsafe impl Send for LPSPI3 {}
-impl LPSPI3 {
-  #[doc = r"Returns a pointer to the register block"]
-  #[inline(always)]
-  pub const fn ptr() -> *const lpspi3::RegisterBlock {
-    0x4103_5000 as *const _
-  }
-}
-impl Deref for LPSPI3 {
-  type Target = lpspi3::RegisterBlock;
-  fn deref(&self) -> &Self::Target {
-    unsafe { &*LPSPI3::ptr() }
-  }
-}
-#[doc = "LPSPI"]
-pub mod lpspi3;
-#[doc = "LPUART"]
-pub struct LPUART3 {
-  _marker: PhantomData<*const ()>,
-}
-unsafe impl Send for LPUART3 {}
-impl LPUART3 {
-  #[doc = r"Returns a pointer to the register block"]
-  #[inline(always)]
-  pub const fn ptr() -> *const lpuart3::RegisterBlock {
-    0x4103_6000 as *const _
-  }
-}
-impl Deref for LPUART3 {
-  type Target = lpuart3::RegisterBlock;
-  fn deref(&self) -> &Self::Target {
-    unsafe { &*LPUART3::ptr() }
-  }
-}
-#[doc = "LPUART"]
-pub mod lpuart3;
-#[doc = "PORT"]
-pub struct PORTE {
-  _marker: PhantomData<*const ()>,
-}
-unsafe impl Send for PORTE {}
-impl PORTE {
-  #[doc = r"Returns a pointer to the register block"]
-  #[inline(always)]
-  pub const fn ptr() -> *const porte::RegisterBlock {
-    0x4103_7000 as *const _
-  }
-}
-impl Deref for PORTE {
-  type Target = porte::RegisterBlock;
-  fn deref(&self) -> &Self::Target {
-    unsafe { &*PORTE::ptr() }
-  }
-}
-#[doc = "PORT"]
-pub mod porte;
-#[doc = "LPCMP"]
-pub struct LPCMP1 {
-  _marker: PhantomData<*const ()>,
-}
-unsafe impl Send for LPCMP1 {}
-impl LPCMP1 {
-  #[doc = r"Returns a pointer to the register block"]
-  #[inline(always)]
-  pub const fn ptr() -> *const lpcmp1::RegisterBlock {
-    0x4103_8000 as *const _
-  }
-}
-impl Deref for LPCMP1 {
-  type Target = lpcmp1::RegisterBlock;
-  fn deref(&self) -> &Self::Target {
-    unsafe { &*LPCMP1::ptr() }
-  }
-}
-#[doc = "LPCMP"]
-pub mod lpcmp1;
 #[doc = "GPIO"]
 pub struct GPIOA {
   _marker: PhantomData<*const ()>,
@@ -1451,26 +1091,6 @@ impl Deref for GPIOD {
     unsafe { &*GPIOD::ptr() }
   }
 }
-#[doc = "MCM"]
-pub struct MCM0 {
-  _marker: PhantomData<*const ()>,
-}
-unsafe impl Send for MCM0 {}
-impl MCM0 {
-  #[doc = r"Returns a pointer to the register block"]
-  #[inline(always)]
-  pub const fn ptr() -> *const mcm0::RegisterBlock {
-    0xe008_0000 as *const _
-  }
-}
-impl Deref for MCM0 {
-  type Target = mcm0::RegisterBlock;
-  fn deref(&self) -> &Self::Target {
-    unsafe { &*MCM0::ptr() }
-  }
-}
-#[doc = "MCM"]
-pub mod mcm0;
 #[no_mangle]
 static mut DEVICE_PERIPHERALS: bool = false;
 #[doc = r"All the peripherals"]
@@ -1478,8 +1098,6 @@ static mut DEVICE_PERIPHERALS: bool = false;
 pub struct Peripherals {
   #[doc = "MSCM"]
   pub MSCM: MSCM,
-  #[doc = "AXBS0"]
-  pub AXBS0: AXBS0,
   #[doc = "DMA0"]
   pub DMA0: DMA0,
   #[doc = "FB"]
@@ -1576,40 +1194,6 @@ pub struct Peripherals {
   pub LPDAC0: LPDAC0,
   #[doc = "VREF"]
   pub VREF: VREF,
-  #[doc = "SEMA421"]
-  pub SEMA421: SEMA421,
-  #[doc = "SMC1"]
-  pub SMC1: SMC1,
-  #[doc = "LLWU1"]
-  pub LLWU1: LLWU1,
-  #[doc = "TRGMUX1"]
-  pub TRGMUX1: TRGMUX1,
-  #[doc = "WDOG1"]
-  pub WDOG1: WDOG1,
-  #[doc = "PCC1"]
-  pub PCC1: PCC1,
-  #[doc = "CAU3"]
-  pub CAU3: CAU3,
-  #[doc = "TRNG"]
-  pub TRNG: TRNG,
-  #[doc = "LPIT1"]
-  pub LPIT1: LPIT1,
-  #[doc = "LPTMR2"]
-  pub LPTMR2: LPTMR2,
-  #[doc = "TPM3"]
-  pub TPM3: TPM3,
-  #[doc = "LPI2C3"]
-  pub LPI2C3: LPI2C3,
-  #[doc = "RSIM"]
-  pub RSIM: RSIM,
-  #[doc = "LPSPI3"]
-  pub LPSPI3: LPSPI3,
-  #[doc = "LPUART3"]
-  pub LPUART3: LPUART3,
-  #[doc = "PORTE"]
-  pub PORTE: PORTE,
-  #[doc = "LPCMP1"]
-  pub LPCMP1: LPCMP1,
   #[doc = "GPIOA"]
   pub GPIOA: GPIOA,
   #[doc = "GPIOE"]
@@ -1620,8 +1204,6 @@ pub struct Peripherals {
   pub GPIOC: GPIOC,
   #[doc = "GPIOD"]
   pub GPIOD: GPIOD,
-  #[doc = "MCM0"]
-  pub MCM0: MCM0,
 }
 impl Peripherals {
   #[doc = r"Returns all the peripherals *once*"]
@@ -1640,9 +1222,6 @@ impl Peripherals {
     DEVICE_PERIPHERALS = true;
     Peripherals {
       MSCM: MSCM {
-        _marker: PhantomData,
-      },
-      AXBS0: AXBS0 {
         _marker: PhantomData,
       },
       DMA0: DMA0 {
@@ -1789,57 +1368,6 @@ impl Peripherals {
       VREF: VREF {
         _marker: PhantomData,
       },
-      SEMA421: SEMA421 {
-        _marker: PhantomData,
-      },
-      SMC1: SMC1 {
-        _marker: PhantomData,
-      },
-      LLWU1: LLWU1 {
-        _marker: PhantomData,
-      },
-      TRGMUX1: TRGMUX1 {
-        _marker: PhantomData,
-      },
-      WDOG1: WDOG1 {
-        _marker: PhantomData,
-      },
-      PCC1: PCC1 {
-        _marker: PhantomData,
-      },
-      CAU3: CAU3 {
-        _marker: PhantomData,
-      },
-      TRNG: TRNG {
-        _marker: PhantomData,
-      },
-      LPIT1: LPIT1 {
-        _marker: PhantomData,
-      },
-      LPTMR2: LPTMR2 {
-        _marker: PhantomData,
-      },
-      TPM3: TPM3 {
-        _marker: PhantomData,
-      },
-      LPI2C3: LPI2C3 {
-        _marker: PhantomData,
-      },
-      RSIM: RSIM {
-        _marker: PhantomData,
-      },
-      LPSPI3: LPSPI3 {
-        _marker: PhantomData,
-      },
-      LPUART3: LPUART3 {
-        _marker: PhantomData,
-      },
-      PORTE: PORTE {
-        _marker: PhantomData,
-      },
-      LPCMP1: LPCMP1 {
-        _marker: PhantomData,
-      },
       GPIOA: GPIOA {
         _marker: PhantomData,
       },
@@ -1853,9 +1381,6 @@ impl Peripherals {
         _marker: PhantomData,
       },
       GPIOD: GPIOD {
-        _marker: PhantomData,
-      },
-      MCM0: MCM0 {
         _marker: PhantomData,
       },
     }

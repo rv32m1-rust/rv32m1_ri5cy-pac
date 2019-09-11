@@ -1,8 +1,6 @@
 #[doc = r"Enumeration of all the interrupts"]
 #[derive(Copy, Clone, Debug)]
 pub enum Interrupt {
-  #[doc = "0 - CTI0_MCM0"]
-  CTI0_MCM0,
   #[doc = "1 - DMA0"]
   DMA0,
   #[doc = "2 - DMA1"]
@@ -111,34 +109,13 @@ pub enum Interrupt {
   LPCMP0,
   #[doc = "54 - LPDAC0"]
   LPDAC0,
-  #[doc = "55 - CAU3_Task_Complete"]
-  CAU3_TASK_COMPLETE,
-  #[doc = "56 - CAU3_Security_Violation"]
-  CAU3_SECURITY_VIOLATION,
-  #[doc = "57 - TRNG"]
-  TRNG,
-  #[doc = "58 - LPIT1"]
-  LPIT1,
-  #[doc = "59 - LPTMR2"]
-  LPTMR2,
-  #[doc = "60 - TPM3"]
-  TPM3,
-  #[doc = "61 - LPI2C3"]
-  LPI2C3,
-  #[doc = "62 - LPSPI3"]
-  LPSPI3,
-  #[doc = "63 - LPUART3"]
-  LPUART3,
   #[doc = "64 - PORTE"]
   PORTE,
-  #[doc = "65 - LPCMP1"]
-  LPCMP1,
 }
 unsafe impl bare_metal::Nr for Interrupt {
   #[inline]
   fn nr(&self) -> u8 {
     match *self {
-      Interrupt::CTI0_MCM0 => 0,
       Interrupt::DMA0 => 1,
       Interrupt::DMA1 => 2,
       Interrupt::DMA2 => 3,
@@ -193,17 +170,7 @@ unsafe impl bare_metal::Nr for Interrupt {
       Interrupt::ADC0 => 52,
       Interrupt::LPCMP0 => 53,
       Interrupt::LPDAC0 => 54,
-      Interrupt::CAU3_TASK_COMPLETE => 55,
-      Interrupt::CAU3_SECURITY_VIOLATION => 56,
-      Interrupt::TRNG => 57,
-      Interrupt::LPIT1 => 58,
-      Interrupt::LPTMR2 => 59,
-      Interrupt::TPM3 => 60,
-      Interrupt::LPI2C3 => 61,
-      Interrupt::LPSPI3 => 62,
-      Interrupt::LPUART3 => 63,
       Interrupt::PORTE => 64,
-      Interrupt::LPCMP1 => 65,
     }
   }
 }
@@ -213,7 +180,6 @@ impl Interrupt {
   #[inline]
   pub fn try_from(value: u8) -> Result<Self, TryFromInterruptError> {
     match value {
-      0 => Ok(Interrupt::CTI0_MCM0),
       1 => Ok(Interrupt::DMA0),
       2 => Ok(Interrupt::DMA1),
       3 => Ok(Interrupt::DMA2),
@@ -268,17 +234,7 @@ impl Interrupt {
       52 => Ok(Interrupt::ADC0),
       53 => Ok(Interrupt::LPCMP0),
       54 => Ok(Interrupt::LPDAC0),
-      55 => Ok(Interrupt::CAU3_TASK_COMPLETE),
-      56 => Ok(Interrupt::CAU3_SECURITY_VIOLATION),
-      57 => Ok(Interrupt::TRNG),
-      58 => Ok(Interrupt::LPIT1),
-      59 => Ok(Interrupt::LPTMR2),
-      60 => Ok(Interrupt::TPM3),
-      61 => Ok(Interrupt::LPI2C3),
-      62 => Ok(Interrupt::LPSPI3),
-      63 => Ok(Interrupt::LPUART3),
       64 => Ok(Interrupt::PORTE),
-      65 => Ok(Interrupt::LPCMP1),
       _ => Err(TryFromInterruptError(())),
     }
   }
